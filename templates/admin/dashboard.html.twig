@@ -1,0 +1,25 @@
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block content_title %}BookStore Demo{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">EasyAdmin Demo</h5>
+                        <p class="card-text">Explore 3 different ways to handle complex data in EasyAdmin.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">1. Getter/Setter (Virtual Properties)</li>
+                            <li class="list-group-item">2. Manual Controller Handling</li>
+                            <li class="list-group-item">3. Best Practice (DataMapper)</li>
+                        </ul>
+                        <a href="{{ ea_url().setController('App\\Controller\\Admin\\BookBestPracticeCrudController') }}" class="btn btn-primary mt-3">Start Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

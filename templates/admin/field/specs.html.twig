@@ -1,0 +1,21 @@
+{# templates/admin/field/specs.html.twig #}
+{% if field.value %}
+    <dl class="row">
+        <dt class="col-sm-4">Pages</dt>
+        <dd class="col-sm-8">{{ field.value.page_count|default('-') }}</dd>
+
+        <dt class="col-sm-4">Cover</dt>
+        <dd class="col-sm-8">{{ field.value.cover_type|default('-') }}</dd>
+
+        <dt class="col-sm-4">Available</dt>
+        <dd class="col-sm-8">
+            {% if field.value.is_available|default(false) %}
+                <span class="badge badge-success" style="background-color: green;">Yes</span>
+            {% else %}
+                <span class="badge badge-danger" style="background-color: red;">No</span>
+            {% endif %}
+        </dd>
+    </dl>
+{% else %}
+    <span class="badge badge-secondary">No specs</span>
+{% endif %}
